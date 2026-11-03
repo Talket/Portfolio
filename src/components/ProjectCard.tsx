@@ -23,8 +23,6 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenCaseStudy }) => {
   // Diffusion simulation state for DDPM
   const [diffusionStep, setDiffusionStep] = useState(0); // 0 = Clean Digit, 1000 = Pure Noise
-  // Interactive counter for After12th
-  const [userCount, setUserCount] = useState(500);
   // Interactive sorting array for visualizer
   const [sortStep, setSortStep] = useState(0);
   const sampleArray = [42, 17, 8, 29, 51, 3];
@@ -118,28 +116,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenCaseStu
           </div>
         )}
 
-        {/* Project 2: AFTER12TH Mobile UI & User Counter */}
+        {/* Project 2: AFTER12TH product release preview */}
         {project.id === 'after12th' && (
           <div className="space-y-3">
             <div className="flex items-center justify-between text-[11px] text-zinc-500 pb-1 border-b border-zinc-200 dark:border-zinc-800">
-              <span className="font-semibold text-zinc-700 dark:text-zinc-300">GOOGLE PLAY DEPLOYMENT</span>
-              <span className="text-sky-400 font-medium">500+ ACTIVE USERS</span>
+              <span className="font-semibold text-zinc-700 dark:text-zinc-300">GOOGLE PLAY RELEASE</span>
+              <span className="text-sky-400 font-medium">APPLIED AI</span>
             </div>
-            <div className="flex items-center justify-around py-1">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zinc-900 dark:text-white font-display">
-                  {userCount}+
+            <div className="grid grid-cols-3 gap-2 text-center py-2">
+              {['CAREER PATHS', 'COURSES', 'AI GUIDANCE'].map((item, i) => (
+                <div key={item} className="rounded-lg border border-zinc-300 dark:border-zinc-800 bg-zinc-200/50 dark:bg-zinc-900 p-2">
+                  <div className="text-[9px] font-bold text-zinc-800 dark:text-zinc-200">{item}</div>
+                  <div className="text-[8px] text-zinc-500 mt-1">MODULE 0{i + 1}</div>
                 </div>
-                <div className="text-[10px] text-zinc-500">Play Store Installs</div>
-              </div>
-              <div className="h-8 w-px bg-zinc-300 dark:bg-zinc-800" />
-              <div className="text-center">
-                <div className="text-sm font-bold text-emerald-500">Cloudflare AI</div>
-                <div className="text-[10px] text-zinc-500">Stream-to-Career Engine</div>
-              </div>
+              ))}
             </div>
             <div className="text-[10px] text-zinc-400 text-center">
-              Flutter Native Mobile • Personalized Career Roadmaps
+              Flutter Android • Firebase • Cloudflare Workers AI
             </div>
           </div>
         )}
@@ -262,20 +255,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenCaseStu
           </div>
         )}
 
-        {/* Project 6: FarmHouse Chalo */}
+        {/* Project 6: FarmHouse Chalo marketplace preview */}
         {project.id === 'farmhouse_chalo' && (
           <div className="space-y-2">
             <div className="flex items-center justify-between text-[11px] text-zinc-500 pb-1 border-b border-zinc-200 dark:border-zinc-800">
-              <span className="font-semibold text-zinc-700 dark:text-zinc-300">OPERATIONAL WORKFLOW</span>
-              <span className="text-amber-500 font-medium">LIVE VENUE</span>
+              <span className="font-semibold text-zinc-700 dark:text-zinc-300">FARMHOUSE DISCOVERY</span>
+              <span className="text-emerald-500 font-medium">MARKETPLACE</span>
             </div>
-            <div className="flex items-center justify-between text-[9px] text-center pt-1">
-              {['TABLE', 'ORDER', 'KOT', 'KITCHEN', 'BILL', 'CLOSE'].map((step, idx) => (
-                <React.Fragment key={step}>
+            <div className="grid grid-cols-3 gap-1.5 text-center text-[9px] pt-1">
+              {['OWNER LISTING', 'DISCOVERY', 'PROPERTY DETAILS'].map((step) => (
+                <div key={step} className="p-2 rounded bg-zinc-200/60 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800">
                   <span className="font-bold text-zinc-800 dark:text-zinc-200">{step}</span>
-                  {idx < 5 && <span className="text-zinc-400">→</span>}
-                </React.Fragment>
+                </div>
               ))}
+            </div>
+            <div className="text-[10px] text-zinc-500 text-center">
+              Flutter • Firebase Auth • Location-aware listings
             </div>
           </div>
         )}
