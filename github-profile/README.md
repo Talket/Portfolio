@@ -17,6 +17,22 @@
   <a href="https://github.com/Talket?tab=repositories">All repositories</a>
 </p>
 
+## PRODUCTS SHIPPED / 02
+
+**[After 12th — Career Guidance](https://play.google.com/store/apps/details?id=com.after12th.careerguide)**  
+An Android career-guidance app for students exploring paths after Class 12, built with Flutter, Firebase and Cloudflare Workers AI.
+
+`Flutter` · `Dart` · `Firebase` · `Cloudflare Workers AI` · `AdMob`  
+[Engineering case study](products/after12th/README.md)
+
+**[FarmHouse Chalo](https://play.google.com/store/search?q=FarmHouse%20Booking&c=apps)**  
+An Android farmhouse-discovery marketplace connecting owners who list properties with visitors exploring stays, amenities, pricing and locations.
+
+`Flutter` · `Dart` · `Firebase Authentication` · `Location services` · `AdMob`  
+[Engineering case study](products/farmhouse-chalo/README.md) · [Public privacy policy and terms](https://github.com/Talket/farmhouse_booking)
+
+<sub>Both are shipped products. Their application source code is not published here; the links above lead to the public app listings or product documentation, not to source-code repositories.</sub>
+
 ---
 
 ### SELECTED SYSTEM / 01
@@ -48,7 +64,7 @@ A FastAPI-based document-processing service designed for a Raspberry Pi-class de
 - **[Adaptive Room Climate Optimizer](https://github.com/Talket/Smart-temperature-management-system)** — a PyTorch experiment trained on synthetic data that predicts room temperature and explores HVAC input optimization. Not validated for real HVAC control.
 - **[ThreadFlow Simulator](https://github.com/Talket/Scalable-Thread-Manager-Sim)** — browser-based learning tool for thread lifecycle, Round Robin scheduling and synchronization.
 - **[Purple Cloud Alerts](https://github.com/Talket/purple-cloud-alerts)** — a Python/Telegram signal-alert experiment. Not a backtested trading strategy.
-- **Product engineering** — Flutter, Firebase and full-stack application work. Some commercial product repositories are private.
+- **Product engineering** — shipped Android products are documented above; application source remains unpublished.
 
 ### TOOLBOX
 
