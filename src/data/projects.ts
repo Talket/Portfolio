@@ -56,51 +56,50 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: 'after12th',
-    title: 'AFTER12TH',
+    title: 'AFTER 12TH',
     status: 'BUILT',
     category: 'Mobile',
-    year: '2025',
-    oneLiner: 'AI-assisted career navigation Android platform serving 500+ active students on Google Play.',
-    summary: 'A student-centric guidance ecosystem published on Google Play. Combines intelligent career roadmaps, college admission prerequisites, and Cloudflare Workers AI inference to answer personalized academic questions based on Class 12 streams.',
-    problem: 'High school graduates in India face overwhelming, unstructured options after 12th board exams with minimal access to high-quality career counselors, leading to uninformed stream transitions and career misalignment.',
-    solution: 'Built and published a native Flutter mobile app integrated with Cloudflare Workers AI and Firebase. Provides personalized stream-to-career mappings, entrance exam schedules, and conversational AI career advisory.',
+    year: '2025–2026',
+    oneLiner: 'AI-assisted career guidance app for students exploring paths after Class 12; published on Google Play.',
+    summary: 'A student-facing Android product that organizes career paths, courses, degree options, entrance-exam information and supporting guidance. An AI-assisted question experience extends discovery beyond static content.',
+    problem: 'Students finishing Class 12 often face fragmented information and pressure to make important education and career decisions without a clear way to compare their options.',
+    solution: 'A Flutter application combining structured career and education content with an AI-assisted question flow, Firebase services and a Cloudflare Workers AI-backed integration.',
     whatTalketBuilt: [
-      'Designed and engineered the complete Flutter mobile application following clean architectural separation between presentation and data layers.',
-      'Integrated Cloudflare Workers AI edge endpoints to provide rapid, context-aware student advisory without expensive GPU overhead.',
-      'Structured hierarchical career tree database covering STEM, Commerce, and Humanities streams in Firebase Firestore.',
-      'Implemented user personalization profiles, bookmarking, search indexing, and offline cached career guides.',
-      'Successfully navigated Google Play Store compliance, target SDK updates, and release management to acquire 500+ real users.'
+      'Built the Android client in Flutter and Dart, structuring the experience around stream-wise exploration and career information.',
+      'Integrated Firebase services for authentication and application data.',
+      'Connected the app to a Cloudflare Workers AI-backed endpoint for AI-assisted student queries.',
+      'Organized career, course, degree and entrance-exam information into navigable categories.',
+      'Prepared and released the Android application through Google Play Console.'
     ],
-    technologies: ['Flutter', 'Dart', 'Firebase', 'Cloudflare Workers AI', 'Android Studio', 'Google Play Console'],
+    technologies: ['Flutter', 'Dart', 'Firebase', 'Cloudflare Workers AI', 'Google Mobile Ads', 'Android'],
     architecture: [
-      { step: '01', title: 'Student Profile Input', description: 'Stream selection (Science/Commerce/Arts) & interest survey', tech: 'Flutter Form' },
-      { step: '02', title: 'Local Cache Check', description: 'Offline-first career roadmap availability check', tech: 'Hive / SharedPreferences' },
-      { step: '03', title: 'Cloud Sync', description: 'Sync career database updates and entrance exam alerts', tech: 'Firebase DB' },
-      { step: '04', title: 'Edge AI Inference', description: 'Cloudflare Workers AI processes natural language queries', tech: 'Workers AI' },
-      { step: '05', title: 'Roadmap Generation', description: 'Visual career timeline, degree choices, and required exams', tech: 'Flutter UI' }
+      { step: '01', title: 'Student Input', description: 'The student selects a stream or explores a career question', tech: 'Flutter UI' },
+      { step: '02', title: 'Mobile Experience', description: 'Career paths, courses and guidance are presented in the app', tech: 'Flutter / Dart' },
+      { step: '03', title: 'Application Services', description: 'Authentication and application data are handled through Firebase services', tech: 'Firebase' },
+      { step: '04', title: 'AI Request', description: 'The app sends an AI-assisted question to a Worker-backed endpoint', tech: 'Cloudflare Workers' },
+      { step: '05', title: 'AI Inference', description: 'The endpoint connects to the configured model service', tech: 'Workers AI' },
+      { step: '06', title: 'Guidance Output', description: 'The response is returned to the mobile experience', tech: 'Flutter UI' }
     ],
     metrics: [
-      { label: 'Google Play Users', value: '500+ Active Installs' },
-      { label: 'User Feedback', value: 'High Engagement' },
-      { label: 'Platforms', value: 'Android (Google Play)' },
-      { label: 'Response Latency', value: '<800ms AI Stream' }
+      { label: 'Distribution', value: 'Google Play' },
+      { label: 'Client', value: 'Flutter / Android' },
+      { label: 'AI Integration', value: 'Cloudflare Workers AI' },
+      { label: 'Product Focus', value: 'Post-Class-12 guidance' }
     ],
-    githubUrl: 'https://github.com/Talket/After12th',
-    demoUrl: undefined,
-    playStoreUrl: 'https://play.google.com/store',
-    deploymentInfo: 'Published on Google Play Store. Active user retention and regular content updates.',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.after12th.careerguide',
+    deploymentInfo: 'Published as an Android application on Google Play. The app source code is not included in this public portfolio repository.',
     challenges: [
-      'Optimizing Flutter build APK size and cold-start time on lower-end Android budget devices.',
-      'Managing API token usage and latency when multiple concurrent students query career trajectories.',
-      'Formatting unstructured LLM responses into structured timeline widgets in Flutter.'
+      'Presenting a large career and education information space in a mobile interface that remains easy to navigate.',
+      'Keeping the AI integration behind a server-side boundary rather than embedding sensitive credentials in the mobile client.',
+      'Handling model output in a predictable format that can be rendered cleanly inside the Flutter experience.'
     ],
     lessonsLearned: [
-      'Real user acquisition is where software meets reality: crashes, edge cases, and unexpected UI bugs quickly emerge.',
-      'Edge AI providers like Cloudflare Workers provide immense latency and cost benefits for mobile-first backends.'
+      'AI is more useful when it supports structured, curated information instead of replacing it.',
+      'Mobile product delivery includes release management, compatibility and maintenance after the first store submission.'
     ],
     futureWork: [
-      'Localized vernacular voice guidance for students in regional Indian languages.',
-      'College cutoff comparison matrix powered by crowdsourced student inputs.'
+      'Add more regional-language guidance and accessible content formats.',
+      'Improve the freshness and traceability of admissions, examination and college information.'
     ],
     featured: true,
     interactiveType: 'counter'
@@ -314,49 +313,51 @@ export const projectsData: ProjectItem[] = [
     title: 'FARMHOUSE CHALO',
     status: 'BUILT',
     category: 'Mobile',
-    year: '2025',
-    oneLiner: 'Live mobile operations management system optimizing table turnover and kitchen order printing.',
-    summary: 'A purpose-built restaurant management application engineered for high-throughput resort and farmhouse dining venues. Coordinates waiter table assignments, live menu toggles, KOT printing, and instant bill closing through cloud synchronization.',
-    problem: 'Outdoor and expansive farmhouse dining spaces face severe coordination latency between servers walking extensive grounds and the central kitchen, causing delayed orders and lost tickets.',
-    solution: 'Engineered a mobile-first operational workflow in Flutter backed by Firebase. Waitstaff manage editable table layouts, fire kitchen order tickets (KOT) directly to kitchen thermal queues, and perform immediate table closure.',
+    year: '2026',
+    oneLiner: 'An Android farmhouse-discovery marketplace connecting property owners with visitors.',
+    summary: 'A marketplace-style mobile product that helps visitors discover farmhouse listings and review location, photographs, pricing, amenities and availability. Owners can create accounts and submit property listings. The platform connects both sides; booking arrangements are made directly between users and owners.',
+    problem: 'People looking for a farmhouse often have to search fragmented listings and verify property details manually. Owners also need a straightforward way to present property information to potential visitors.',
+    solution: 'A mobile marketplace experience with user accounts, owner-submitted listings, property details and location-aware discovery, supported by Firebase Authentication and documented advertising integration.',
     whatTalketBuilt: [
-      'Engineered interactive table grid with dynamic visual status indicators (Vacant, Occupied, KOT Fired, Billed).',
-      'Built menu catalog management with real-time 86/out-of-stock toggles to avoid ordering unavailable items.',
-      'Implemented KOT generation service structuring items by preparation station (Grill, Main, Beverages).',
-      'Developed table settlement workflow integrating discount authorizations and final payment capture.',
-      'Secured managerial operations via role-based authentication and financial audit logs.'
+      'Built the Android marketplace experience using Flutter and Dart.',
+      'Integrated Firebase Authentication for account access.',
+      'Created the product flow for owner-submitted farmhouse listings, including location, photographs, pricing, amenities, rules and availability information.',
+      'Worked on location-aware discovery and map/direction support with permission-based device location.',
+      'Integrated advertising placements documented for Google AdMob.'
     ],
-    technologies: ['Flutter', 'Dart', 'Firebase Firestore', 'Firebase Auth', 'Cloud Messaging'],
+    technologies: ['Flutter', 'Dart', 'Firebase Authentication', 'Google AdMob', 'Location services', 'Android'],
     architecture: [
-      { step: '01', title: 'Table Selection', description: 'Server selects physical dining section & table number', tech: 'Flutter Grid' },
-      { step: '02', title: 'Order Compilation', description: 'Item modifiers, quantity controls, and custom notes', tech: 'App State' },
-      { step: '03', title: 'KOT Generation', description: 'Cloud document generated with station routing tags', tech: 'Firebase DB' },
-      { step: '04', title: 'Kitchen Receipt', description: 'Printed in kitchen; food preparation timer initiated', tech: 'Thermal Service' },
-      { step: '05', title: 'Bill Generation', description: 'Calculates taxes, service charge, and discounts', tech: 'Billing Engine' },
-      { step: '06', title: 'Table Closing', description: 'Frees table for next guest and records daily revenue ledger', tech: 'Ledger Audit' }
+      { step: '01', title: 'User Entry', description: 'A visitor or farmhouse owner enters the mobile application', tech: 'Flutter / Dart' },
+      { step: '02', title: 'Account Access', description: 'Users authenticate before using account-specific features', tech: 'Firebase Auth' },
+      { step: '03', title: 'Owner Listing', description: 'Owners submit property details, images, pricing and availability', tech: 'Listing Workflow' },
+      { step: '04', title: 'Discovery', description: 'Visitors explore available listings and location information', tech: 'Search / Location' },
+      { step: '05', title: 'Property Review', description: 'Visitors inspect photos, amenities, rules and pricing', tech: 'Listing Details' },
+      { step: '06', title: 'Direct Arrangement', description: 'Visitors verify details and arrange booking directly with the owner', tech: 'Owner / Visitor' }
     ],
     metrics: [
-      { label: 'Operational Impact', value: 'Live Venue Usage' },
-      { label: 'Turnaround Time', value: '~25% Faster Table Prep' },
-      { label: 'Platform', value: 'Android (Flutter)' },
-      { label: 'Sync Mechanism', value: 'Real-time Firestore' }
+      { label: 'Product Model', value: 'Discovery marketplace' },
+      { label: 'Primary Roles', value: 'Visitors and owners' },
+      { label: 'Platform', value: 'Android' },
+      { label: 'Core Flow', value: 'Listings and discovery' }
     ],
-    githubUrl: 'https://github.com/Talket/FarmHouse_Chalo',
-    demoUrl: undefined,
-    deploymentInfo: 'Active internal deployment at dining venue in Gujarat. Handled live weekend customer traffic.',
+    playStoreUrl: 'https://play.google.com/store/search?q=FarmHouse%20Booking&c=apps',
+    deploymentInfo: 'Released as an Android product. The public farmhouse_booking repository contains privacy-policy and terms documents only; it does not contain the application source code.',
     challenges: [
-      'Maintaining wireless synchronization across expansive open-air farmhouse grounds with patchy Wi-Fi.',
-      'Structuring table-merge operations when large family parties combine multiple adjacent tables.'
+      'Capturing the property information visitors need to evaluate a listing, including location, photos, pricing, amenities and availability.',
+      'Supporting optional location access without making permission approval a prerequisite for every use of the product.',
+      'Making the boundary between discovery and direct owner-user booking arrangements clear in the product experience.'
     ],
     lessonsLearned: [
-      'Operational software must be resilient to user mistake: servers frequently tap the wrong table and require instant undo options.',
-      'Clear color-coded statuses (Green/Yellow/Red) dramatically speed up staff recognition.'
+      'Two-sided marketplace products need clear workflows for both listing owners and visitors.',
+      'Property discovery depends on trustworthy, complete listing information as much as on the mobile interface.',
+      'Privacy, location permissions and clear booking responsibilities are core product requirements.'
     ],
     futureWork: [
-      'Automated table reservation integration synced with Google Business and WhatsApp APIs.',
-      'Customer-facing QR code reordering for beverage refills.'
+      'Improve listing filters and search relevance as the property catalogue grows.',
+      'Add stronger listing verification and reporting workflows.',
+      'Explore an in-app booking flow only if operational, payment and support responsibilities are clearly defined.'
     ],
-    featured: false,
+    featured: true,
     interactiveType: 'workflow'
   }
 ];
