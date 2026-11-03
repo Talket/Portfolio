@@ -4,8 +4,6 @@ A high-end, highly interactive personal portfolio website and digital laboratory
 
 ## Core Philosophy
 
-> **"Ideas are cheap. Building them is the interesting part."**
-> 
 > *"I’m interested in the space where machine learning meets real software engineering — where models become systems, systems become products, and products have to survive outside the development environment."*
 
 ---
