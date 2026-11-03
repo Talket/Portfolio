@@ -31,7 +31,7 @@ An Android farmhouse-discovery marketplace connecting owners who list properties
 `Flutter` · `Dart` · `Firebase Authentication` · `Location services` · `AdMob`  
 [Engineering case study](products/farmhouse-chalo/README.md) · [Public privacy policy and terms](https://github.com/Talket/farmhouse_booking)
 
-<sub>Both are shipped products. Their application source code is not published here; the links above lead to the public app listings or product documentation, not to source-code repositories.</sub>
+<sub>Both are shipped products. Their application source code is not published here; the links above lead to a Play Store listing or search page and public product documentation, not to source-code repositories.</sub>
 
 ---
 
